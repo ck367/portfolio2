@@ -78,9 +78,10 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "bioimage bioimage bio bio bio bio"
+    "lng-title lng-title lng-title lng-title lng-title lng-title"
+    "job1 job2 job3 job4 job5 job6";
+  grid-template-columns: repeat(6, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -92,6 +93,12 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+  }
+
+  .lng-title {
+    grid-area: lng-title;
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
   }
 
   .job-1 {
@@ -106,10 +113,26 @@ main {
     grid-area: job3;
   }
 
+  .job-4 {
+    grid-area: job4;
+  }
+
+  .job-5 {
+    grid-area: job5;
+  }
+
+  .job-6 {
+    grid-area: job6;
+  }
+
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+
+    h3 {
+      border-bottom: $secondary-color 5px solid;
+    }
   }
 }
 
